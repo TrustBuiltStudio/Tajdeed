@@ -67,7 +67,7 @@ const HeroSection = () => {
           {/* Right Side - Content */}
           <div className="pl-0 lg:pl-8">
             <h1 className="text-5xl md:text-6xl font-bold text-[#1a1a1a] leading-tight tracking-tight mb-6">
-              Your Gateway to <br /> Career Success <br /> from India
+              Tajdeed Typing and <br /> Documents Photocopying Service <br />
             </h1>
             
             <p className="text-gray-600 text-lg mb-10 max-w-lg leading-relaxed">

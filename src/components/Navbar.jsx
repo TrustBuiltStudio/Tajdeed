@@ -22,9 +22,9 @@ const Navbar = () => {
             <div className="w-4 h-1 bg-green-600 rounded-full mt-1"></div>
           </div>
           <a href="#about" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">About Us</a>
-          <a href="#courses" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Courses</a>
-          <a href="#teachers" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Teachers</a>
-          <a href="#admissions" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Admissions</a>
+          <a href="#courses" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Services</a>
+          {/* <a href="#teachers" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Teachers</a> */}
+          {/* <a href="#admissions" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Admissions</a> */}
           <a href="#contact" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Contact</a>
         </div>
 
@@ -32,10 +32,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <div className="h-6 w-px bg-gray-300"></div>
 
-          <div className="flex items-center gap-2 cursor-pointer">
-            <img src="https://flagcdn.com/w20/in.png" alt="India" className="w-5 h-auto rounded-sm" />
-            <span className="text-gray-700 text-sm font-medium">India</span>
-          </div>
+          {/* <div className="flex items-center gap-2 cursor-pointer"> */}
+            {/* <img src="https://flagcdn.com/w20/in.png" alt="India" className="w-5 h-auto rounded-sm" /> */}
+            {/* <span className="text-gray-700 text-sm font-medium">Whatsapp</span> */}
+          {/* </div> */}
 
           <div className="h-6 w-px bg-gray-300"></div>
 
