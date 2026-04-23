@@ -13,7 +13,7 @@ const App = () => {
     <div className="min-h-screen bg-white font-sans selection:bg-[#059669] selection:text-white">
       <Navbar />
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <WhyChooseUs />
       <AboutSection />
       <CoursesSection />
