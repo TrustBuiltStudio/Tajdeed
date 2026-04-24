@@ -7,6 +7,7 @@ import CoursesSection from './components/CoursesSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import Services2 from './components/Services2';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <WhyChooseUs />
       <AboutSection />
       <CoursesSection />
+      <Services2></Services2>
       
       <Footer />
 

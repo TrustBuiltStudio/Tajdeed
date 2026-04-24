@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Left Side - Image Slider */}
           <div className="pl-0 lg:pl-8">
             <h1 className="text-4xl md:text-6xl font-bold text-[#1a1a1a] leading-tight tracking-tight mb-6">
-              Tajdeed Typing and <br /> Documents Photocopying Service <br />
+              Tajdeed Typing <br /> Center <br />
             </h1>
 
             <p className="text-gray-600 text-lg mb-10 max-w-lg leading-relaxed">

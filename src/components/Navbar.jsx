@@ -1,56 +1,71 @@
-import React from 'react';
-
-
+import React from "react";
+import logo from "../assets/logo.jpeg"; // adjust path if needed
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-white border-b border-gray-100 py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <nav className="w-full bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-        {/* Logo */}
-        <div className="flex items-center">
-          <div className="w-12 h-12 relative flex items-center justify-center">
-            {/* Simple logo placeholder based on image */}
-            <div className="w-8 h-8 border-[6px] border-b-black border-l-green-600 border-r-red-600 border-t-transparent rotate-45"></div>
+        {/* Logo + Name */}
+        <div className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Tajdeed Typing Center"
+            className="w-14 h-14 object-contain rounded-full"
+          />
+
+          <div className="leading-tight">
+            <h1 className="font-bold text-lg text-green-700">
+              Tajdeed Typing
+            </h1>
+            <p className="text-xs text-gray-500">
+              Typing Center UAE
+            </p>
           </div>
         </div>
 
-        {/* Links */}
+        {/* Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <div className="flex flex-col items-center">
-            <a href="#" className="text-green-600 font-semibold text-sm">Home</a>
-            <div className="w-4 h-1 bg-green-600 rounded-full mt-1"></div>
-          </div>
-          <a href="#about" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">About Us</a>
-          <a href="#courses" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Services</a>
-          {/* <a href="#teachers" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Teachers</a> */}
-          {/* <a href="#admissions" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Admissions</a> */}
-          <a href="#contact" className="text-green-700 hover:text-green-800 font-semibold text-sm transition-colors">Contact</a>
+          <a
+            href="#"
+            className="text-green-600 font-semibold border-b-2 border-green-600 pb-1"
+          >
+            Home
+          </a>
+
+          <a
+            href="#about"
+            className="text-green-700 hover:text-green-800 font-semibold transition"
+          >
+            About Us
+          </a>
+
+          <a
+            href="./services2"
+            className="text-green-700 hover:text-green-800 font-semibold transition"
+          >
+          Services
+          </a>
+
+          <a
+            href="#contact"
+            className="text-green-700 hover:text-green-800 font-semibold transition"
+          >
+            Contact
+          </a>
         </div>
 
-        {/* Right Section */}
-        <div className="hidden md:flex items-center space-x-6">
-          <div className="h-6 w-px bg-gray-300"></div>
+        {/* CTA */}
+        <a
+          href="https://wa.me/9719776"
+          target="_blank"
+          rel="noreferrer"
+          className="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full font-medium transition"
+        >
+          WhatsApp Us
+        </a>
 
-          {/* <div className="flex items-center gap-2 cursor-pointer"> */}
-            {/* <img src="https://flagcdn.com/w20/in.png" alt="India" className="w-5 h-auto rounded-sm" /> */}
-            {/* <span className="text-gray-700 text-sm font-medium">Whatsapp</span> */}
-          {/* </div> */}
-
-          <div className="h-6 w-px bg-gray-300"></div>
-
-          {/* <div className="flex items-center space-x-3">
-            <a href="#" className="w-8 h-8 rounded-full border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white transition-colors">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white transition-colors">
-              <Instagram className="w-4 h-4" />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white transition-colors">
-              <Youtube className="w-4 h-4" />
-            </a>
-          </div> */}
-        </div>
       </div>
     </nav>
   );
