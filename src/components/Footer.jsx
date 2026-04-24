@@ -44,17 +44,17 @@ const Footer = () => {
             <p className="text-gray-600">© Takleesbusiness 2026.</p>
           </div>
 
-          <div className="flex items-center space-x-3 mt-6 md:mt-0 pb-2">
+          {/* <div className="flex items-center space-x-3 mt-6 md:mt-0 pb-2">
             <a href="#" className="w-10 h-10 rounded-full border-2 border-green-500 flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-colors">
-              {/* <Linkedin className="w-5 h-5" /> */}
+              <Linkedin className="w-5 h-5" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full border-2 border-green-500 flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-colors">
-              {/* <Instagram className="w-5 h-5" /> */}
+              <Instagram className="w-5 h-5" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full border-2 border-green-500 flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-colors">
-              {/* <Youtube className="w-5 h-5" /> */}
+              <Youtube className="w-5 h-5" />
             </a>
-          </div>
+          </div> */}
         </div>
 
       </div>
