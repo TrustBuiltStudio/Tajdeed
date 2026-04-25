@@ -8,6 +8,7 @@ const CoursesSection = () => {
       title: "Typing Services",
       description: "Comprehensive documentation including visa applications, translations, and official processing.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      
     },
     {
       title: "Business Setup",
@@ -68,9 +69,13 @@ const CoursesSection = () => {
                 </p>
                 
                 {/* Read More Button */}
-                <button className="w-full py-2.5 text-center border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-300 mt-auto">
-                  Read More
-                </button>
+               <Link 
+  to="/services2" 
+  className="w-full py-2.5 flex items-center justify-center gap-2 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-300 mt-auto"
+>
+  Read more
+  <ArrowRight className="w-5 h-5" />
+</Link>
               </div>
             </div>
           ))}

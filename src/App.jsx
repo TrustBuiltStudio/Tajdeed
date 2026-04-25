@@ -15,7 +15,7 @@ const Home = () => (
     <HeroSection />
     {/* <StatsSection /> */}
     <WhyChooseUs />
-    <AboutSection />
+ 
     <CoursesSection />
   </>
 );

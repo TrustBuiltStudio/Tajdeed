@@ -1,8 +1,8 @@
-
 import React from 'react';
+import { Link } from "react-router-dom";
 import { ArrowRight } from 'lucide-react';
 
-// Import your local images
+// Import Images
 import visaImg from "../assets/visa.jpeg";
 import documentImg from "../assets/document.jpeg";
 import fineImg from "../assets/fine.jpeg";
@@ -16,6 +16,7 @@ import photocopyImg from "../assets/document.jpeg";
 import printingImg from "../assets/fine.jpeg";
 import businesscardImg from "../assets/medical.jpeg";
 import bannerImg from "../assets/visa.jpeg";
+import tj from "../assets/logo.jpeg"
 
 const Services = () => {
   const openWhatsApp = (serviceName) => {
@@ -33,22 +34,22 @@ const Services = () => {
         {
           title: "Visa Services",
           description: "Complete UAE visa processing including new applications, renewals, family visas and immigration assistance.",
-          image: visaImg,
+          image: tj,
         },
         {
           title: "Document Services",
           description: "Professional document typing, attestations, applications, official forms and government processing support.",
-          image: documentImg,
+          image: tj,
         },
         {
           title: "Fine Check",
-          description: "Traffic and immigration fine verification services to help you check, track and manage penalties efficiently.",
-          image: fineImg,
+          description: "Traffic and immigration fine verification services to help you check and manage penalties efficiently.",
+          image: tj,
         },
         {
           title: "Medical Services",
           description: "Medical test booking, health card processing and related government health procedures handled professionally.",
-          image: medicalImg,
+          image: tj,
         },
       ],
     },
@@ -57,23 +58,23 @@ const Services = () => {
       services: [
         {
           title: "Trade License",
-          description: "Complete trade license processing and renewal for all business types in UAE with full government compliance support.",
-          image: businessImg,
+          description: "Complete trade license processing and renewal for all business types in UAE.",
+          image: tj,
         },
         {
           title: "PRO Services",
-          description: "Professional Public Relations Officer services for seamless government liaison, document processing, and regulatory compliance.",
-          image: proImg,
+          description: "Professional Public Relations Officer services for government liaison and document processing.",
+          image: tj,
         },
         {
           title: "Company Formation",
-          description: "End-to-end business setup assistance including mainland and free zone company registration with expert guidance.",
-          image: companyImg,
+          description: "End-to-end business setup assistance including mainland and free zone company registration.",
+          image: tj,
         },
         {
           title: "Compliance Advisory",
-          description: "Expert guidance on UAE business regulations, visa requirements, and ongoing compliance obligations.",
-          image: complianceImg,
+          description: "Expert guidance on UAE regulations and compliance obligations.",
+          image: tj,
         },
       ],
     },
@@ -82,8 +83,8 @@ const Services = () => {
       services: [
         {
           title: "Air Ticket Booking",
-          description: "Book your next flight with confidence. Competitive rates and comprehensive travel support for domestic and international travel.",
-          image: airticketImg,
+          description: "Competitive rates and comprehensive travel support for domestic and international travel.",
+          image: tj,
         },
       ],
     },
@@ -92,60 +93,76 @@ const Services = () => {
       services: [
         {
           title: "Photocopying Services",
-          description: "High-quality document copying services with fast turnaround times for all your personal and business needs.",
-          image: photocopyImg,
+          description: "High-quality document copying services with fast turnaround times.",
+          image: tj,
         },
         {
           title: "Printing Services",
-          description: "Professional printing solutions for documents, reports, marketing materials and more with premium quality output.",
-          image: printingImg,
+          description: "Professional printing solutions for documents and marketing materials.",
+          image: tj,
         },
         {
           title: "Business Cards",
-          description: "Professional business card design and premium printing quality to make a lasting first impression.",
-          image: businesscardImg,
+          description: "Premium business card design and professional printing.",
+          image: tj,
         },
         {
           title: "Banners & Large Format",
-          description: "Large-format printing for marketing materials, events, exhibitions and outdoor advertising needs.",
-          image: bannerImg,
+          description: "Large-format printing for events and advertising needs.",
+          image: tj,
         },
       ],
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section className="py-24 min-h-screen" style={{ backgroundColor: '#FDFDFD' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Home Button */}
+        <div className="mb-8">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+            style={{ backgroundColor: '#059669', color: '#FDFDFD' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#047857'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#059669'}
+          >
+            ← Back To Home
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Professional government, visa, business and printing services designed
-            to make your processes easy and efficient.
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#1a1a1a' }}>
+            Our <span style={{ color: '#059669' }}>Services</span>
+          </h2>
+          <div className="w-24 h-1 rounded-full mx-auto mb-6" style={{ backgroundColor: '#059669' }}></div>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
+            Professional government, visa, business and printing services
+            designed to make your processes easy and efficient.
           </p>
         </div>
 
-        {/* Service Categories */}
+        {/* Categories */}
         {serviceCategories.map((category, catIdx) => (
           <div key={catIdx} className="mb-20">
-            {/* Category Header */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-emerald-700 mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#047857' }}>
                 {category.category}
               </h3>
-              <div className="w-20 h-1 bg-emerald-600 rounded-full"></div>
+              <div className="w-20 h-1 rounded-full" style={{ backgroundColor: '#059669' }}></div>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Service Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {category.services.map((service, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                  className="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+                  style={{ backgroundColor: '#FDFDFD', border: '1px solid #e5e7eb' }}
                 >
                   {/* Image */}
-                  <div className="h-40 overflow-hidden bg-gray-50 flex items-center justify-center p-4">
+                  <div className="h-48 overflow-hidden flex items-center justify-center p-4" style={{ backgroundColor: '#f9fafb' }}>
                     <img
                       src={service.image}
                       alt={service.title}
@@ -154,29 +171,25 @@ const Services = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: '#1a1a1a' }}>
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                    <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: '#6B7280' }}>
                       {service.description}
                     </p>
 
-                    {/* Buttons */}
-                    <div className="flex gap-3">
-                      <a
-                        href="#contact"
-                        className="flex-1 text-center border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg py-2.5 hover:bg-emerald-600 hover:text-white transition-all duration-300"
-                      >
-                        Read More
-                      </a>
-                      <button
-                        onClick={() => openWhatsApp(service.title)}
-                        className="flex-1 bg-emerald-600 text-white font-semibold rounded-lg py-2.5 hover:bg-emerald-700 transition-all duration-300"
-                      >
-                        Enquiry
-                      </button>
-                    </div>
+                    {/* Enquiry Button */}
+                    <button
+                      onClick={() => openWhatsApp(service.title)}
+                      className="w-full font-semibold rounded-lg py-2.5 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-auto"
+                      style={{ backgroundColor: '#059669', color: '#FDFDFD' }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#047857'}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#059669'}
+                    >
+                      <span>📞</span>
+                      Enquiry Now
+                    </button>
                   </div>
                 </div>
               ))}
@@ -186,9 +199,16 @@ const Services = () => {
 
         {/* Mobile View All Button */}
         <div className="mt-12 text-center lg:hidden">
-          <button className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors">
-            View All Services <ArrowRight className="w-5 h-5" />
-          </button>
+          <Link 
+            to="/services2"
+            className="inline-flex items-center gap-2 font-semibold transition-colors"
+            style={{ color: '#059669' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#047857'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#059669'}
+          >
+            View All Services
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
@@ -196,4 +216,3 @@ const Services = () => {
 };
 
 export default Services;
-

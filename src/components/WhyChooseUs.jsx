@@ -1,40 +1,39 @@
 import React from 'react';
-import { Presentation, Award, Briefcase, Users, Ribbon, Handshake } from 'lucide-react';
+import { Presentation, Award, Briefcase, Users, Ribbon, Handshake, Shield, Star } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: <Presentation className="w-6 h-6" />,
-      title: "Fast and Reliable",
-      description: "Quick turnaround times with dependable service delivery you can trust."
+      icon: <Ribbon className="w-6 h-6" />,
+      title: "Quality & Professionalism",
+      description: "High-quality document processing with unmatched professionalism and attention to every detail."
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Goverment Approved",
-      description: "Fully licensed and authorized service provider with official credentials."
+      title: "Government Approved",
+      description: "Fully licensed and authorized service provider with official credentials you can trust."
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      title: "Affordable Pricing",
-      description: "ompetitive rates without compromising on quality or service excellence."
+      title: "Best Price & Experience",
+      description: "Competitive best-price guarantee backed by years of industry experience."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "24/7 Support",
-      description: "Round-the-clock customer assistance for all your business needs"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Document Confidentiality",
+      description: "Your documents are safe with us — complete privacy and data protection guaranteed."
     },
   ];
 
   return (
     <section className="py-20 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#059669] mb-6 tracking-tight">
             Why Choose Us?
           </h2>
           <p className="text-xl text-gray-700 leading-relaxed">
-            We are committed to providing the best learning experience and helping you achieve your career goals.
+            We provide liable, accurate, and efficient document processing solutions for individuals and businesses across the UAE.
           </p>
         </div>
 
