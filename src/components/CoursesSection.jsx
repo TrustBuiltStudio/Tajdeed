@@ -1,83 +1,85 @@
 import React from 'react';
-import { ArrowRight, Clock, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CoursesSection = () => {
-  const courses = [
+  const services = [
     {
       title: "Typing Services",
-      duration: "6 Months",
-      Description: "Comprehensive documentation including visa applications, translations, and official processing..",
-      rating: "4.9",
+      description: "Comprehensive documentation including visa applications, translations, and official processing.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Business Setup",
-      Description: "Complete company formation, trade licenses, PRO services, and compliance advisory",
-      duration: "3 Months",
-      rating: "4.8",
+      description: "Complete company formation, trade licenses, PRO services, and compliance advisory.",
       image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Ticketing Services",
-      Description: "TICKETING SERVICES Air ticket booking for domestic and international flights with best price guarantee.",
-      duration: "4 Months",
-      rating: "5.0",
+      description: "Air ticket booking for domestic and international flights with best price guarantee.",
       image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Printing Services",
-      Description: "PRINTING SERVICES High-quality printing, photocopying, business cards, and banners.",
-      duration: "4 Months",
-      rating: "5.0",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      description: "High-quality printing, photocopying, business cards, and banners.",
+      image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     }
-
   ];
 
   return (
-    <section id="courses" className="py-24 bg-gray-50">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-4xl font-bold text-[#1a1a1a] mb-4">Services </h2>
-            <p className="text-gray-600 text-lg max-w-2xl">Explore our most popular programs designed by industry experts to fast-track your career.</p>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
+          <div className="text-left">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-gray-600 text-lg max-w-2xl">
+              Explore our comprehensive range of professional services designed to meet your business needs.
+            </p>
           </div>
-          <Link to="/services2" className="hidden md:flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
-            View All Courses <ArrowRight className="w-5 h-5" />
+          <Link to="/services2" className="hidden md:flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors">
+            View All Services <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {courses.map((course, index) => (
-            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-              <div className="h-48 overflow-hidden relative">
-                <img src={course.image} alt={course.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              {/* Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 h-10">{course.Description}</p>
-                <div className="flex items-center justify-between text-gray-500 text-sm mb-6 border-b border-gray-100 pb-6">
-                  <div className="flex items-center gap-1 mt-5">
-                    <Clock className="w-4 h-4" />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-1 text-amber-500">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="font-semibold">{course.rating}</span>
-                  </div>
-                </div>
-                <button className="w-full py-3 text-center border-2 border-[#059669] text-[#059669] font-bold rounded-lg hover:bg-[#059669] hover:text-white transition-colors">
-                  Enroll Now
+              
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                  {service.description}
+                </p>
+                
+                {/* Read More Button */}
+                <button className="w-full py-2.5 text-center border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-300 mt-auto">
+                  Read More
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 text-center md:hidden">
-          <Link to="/services2" className="inline-flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
-            View All Courses <ArrowRight className="w-5 h-5" />
+        {/* Mobile View All Button */}
+        <div className="mt-12 text-center md:hidden">
+          <Link to="/services2" className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors">
+            View All Services <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </div>

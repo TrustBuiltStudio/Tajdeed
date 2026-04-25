@@ -14,14 +14,14 @@ const AboutSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block border-l-4 border-[#059669]">
-              <p className="text-3xl font-bold text-[#059669] mb-1">Top Rated</p>
+            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block border-l-4 border-[#0A2540]">
+              <p className="text-3xl font-bold text-[#0A2540] mb-1">Top Rated</p>
               <p className="text-gray-600 font-medium">Training Institute</p>
             </div>
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">Empowering Your Future With Quality Education</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Empowering Your Future With Quality Education</h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
               At Takhlees Career Academy, we believe in transforming lives through skill-based education. Our comprehensive programs are designed to equip you with the practical knowledge needed to excel in today's competitive job market.
             </p>
@@ -29,7 +29,7 @@ const AboutSection = () => {
               With a team of industry veterans and a curriculum tailored to global standards, we ensure that every student is job-ready from day one.
             </p>
             
-            <button className="flex items-center gap-2 text-[#059669] font-bold text-lg hover:text-[#047857] transition-colors group">
+            <button className="flex items-center gap-2 text-[#0A2540] font-bold text-lg hover:text-[#1a3a5c] transition-colors group">
               Read Our Full Story 
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
