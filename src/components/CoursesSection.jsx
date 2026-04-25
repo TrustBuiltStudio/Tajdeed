@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Clock, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CoursesSection = () => {
   const courses = [
@@ -42,9 +43,9 @@ const CoursesSection = () => {
             <h2 className="text-4xl font-bold text-[#1a1a1a] mb-4">Services </h2>
             <p className="text-gray-600 text-lg max-w-2xl">Explore our most popular programs designed by industry experts to fast-track your career.</p>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
+          <Link to="/services2" className="hidden md:flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
             View All Courses <ArrowRight className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -75,9 +76,9 @@ const CoursesSection = () => {
         </div>
 
         <div className="mt-10 text-center md:hidden">
-          <button className="inline-flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
+          <Link to="/services2" className="inline-flex items-center gap-2 text-[#059669] font-semibold hover:text-[#047857] transition-colors">
             View All Courses <ArrowRight className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
