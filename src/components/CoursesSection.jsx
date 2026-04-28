@@ -25,13 +25,13 @@ const CoursesSection = () => {
       image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       anchor: 'ticketing-services',
     },
-    {
-      id: 4,
-      title: 'Printing Services',
-      description: 'High-quality printing, photocopying, business cards, and banners.',
-      image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      anchor: 'printing-services',
-    },
+   {
+  id: 4,
+  title: 'Printing Services',
+  description: 'High-quality printing, photocopying, business cards, and banners.',
+  image: 'https://media.istockphoto.com/id/1350567203/photo/businessmen-press-button-on-the-panel-for-using-photocopier-or-printer-for-printout-and.jpg?s=612x612&w=0&k=20&c=kqrfYz-l6I-m2w_aQ_ishSVeJzFuhcvgjwGAJ1Ztx4c=',
+  anchor: 'printing-services',
+},
   ];
 
   return (
