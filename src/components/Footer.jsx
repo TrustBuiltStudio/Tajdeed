@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="w-full bg-[#fdfdfd] pt-16 pb-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-16">
-          
           {/* Left Column - Company Info */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#059669] leading-tight">
               Tajdeed Typing and <br />
-        Center
+              Center
             </h2>
             <p className="text-gray-600 text-lg max-w-md">
               Your trusted partner for professional typing and document services in Al Ain.
@@ -25,7 +23,6 @@ const Footer = () => {
 
           {/* Right Column - Navigation & Contact */}
           <div className="grid sm:grid-cols-2 gap-8">
-            
             {/* Navigation Links */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
@@ -54,16 +51,15 @@ const Footer = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Get in Touch</h3>
-              
               <div className="space-y-4">
-                {/* Phone */}
+                {/* Phone - Corrected format: no leading zero after country code */}
                 <div className="flex items-center gap-3 group">
                   <div className="bg-[#059669]/10 p-2 rounded-full group-hover:bg-[#059669]/20 transition-colors">
                     <Phone className="w-5 h-5 text-[#059669]" />
                   </div>
-                  <span className="text-gray-700 text-base">+971-4-XXX-XXXX</span>
+                  <span className="text-gray-700 text-base">+971 50 751 4808</span>
                 </div>
-                
+
                 {/* Email */}
                 <div className="flex items-center gap-3 group">
                   <div className="bg-[#059669]/10 p-2 rounded-full group-hover:bg-[#059669]/20 transition-colors">
@@ -73,7 +69,7 @@ const Footer = () => {
                     tajdeedalain@gmail.com
                   </a>
                 </div>
-                
+
                 {/* Address */}
                 <div className="flex gap-3 group">
                   <div className="bg-[#059669]/10 p-2 rounded-full h-10 group-hover:bg-[#059669]/20 transition-colors flex-shrink-0">
@@ -90,11 +86,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Map Section */}
+        {/* Map Section - Improved embed with more precise location */}
         <div className="mb-12 overflow-hidden rounded-xl shadow-md">
           <iframe
-            title="Tajdeed Office Location Map"
-            src="https://www.google.com/maps?q=Al%20Safra%20Industrial%20Area%20Al%20Ain%20Abu%20Dhabi&output=embed"
+            title="Tajdeed Typing Center Office Location Map"
+            src="https://www.google.com/maps?q=24.1639,55.7782&output=embed"
             width="100%"
             height="250"
             style={{ border: 0 }}
@@ -102,7 +98,11 @@ const Footer = () => {
             className="w-full hover:shadow-lg transition-shadow duration-300"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
+            aria-label="Google Map showing Tajdeed Typing Center location in Al Safra Industrial Area, Al Ain"
           ></iframe>
+          <p className="text-xs text-gray-400 text-center mt-2">
+            📍 Al-Safra Industrial Area, Block 11, Plot 56, Al Ain
+          </p>
         </div>
 
         {/* Bottom Bar */}
@@ -121,7 +121,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );

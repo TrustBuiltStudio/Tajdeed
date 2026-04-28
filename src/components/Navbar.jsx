@@ -81,7 +81,7 @@ const Navbar = () => {
             {/* Desktop Right Buttons */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="https://wa.me/971569229776"
+                href="https://wa.me/971507514808" // ✅ Fixed number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105"
@@ -118,8 +118,8 @@ const Navbar = () => {
             aria-hidden="true"
           />
 
-          {/* Mobile Menu Panel */}
-          <div className="fixed top-20 left-0 right-0 bg-white shadow-xl rounded-b-2xl mx-4 overflow-hidden transition-all duration-300 ease-out transform origin-top">
+          {/* Mobile Menu Panel - added z-50 to stay above backdrop */}
+          <div className="fixed top-20 left-0 right-0 bg-white shadow-xl rounded-b-2xl mx-4 overflow-hidden transition-all duration-300 ease-out transform origin-top z-50">
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
@@ -138,7 +138,7 @@ const Navbar = () => {
 
               <div className="pt-4 border-t border-gray-200">
                 <a
-                  href="https://wa.me/971569229776"
+                  href="https://wa.me/971507514808" // ✅ Fixed number
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}

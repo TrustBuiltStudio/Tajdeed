@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import tj from "../assets/logo.jpeg";
 
-const Healthservice = () => {
+const HealthService = () => {
   const openWhatsApp = (serviceName) => {
     const msg = `Hello, I would like an enquiry about ${serviceName}`;
     window.open(
-      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`, // ✅ correct number
       "_blank"
     );
   };
@@ -16,16 +16,12 @@ const Healthservice = () => {
     {
       title: "Medical Services",
       services: [
-      "Family Insurance",
-     "Individual Health Insurance", 
-     "Company Health Insurance",
-      "Flexi Health Insurance Plans"
+        "Family Insurance",
+        "Individual Health Insurance",
+        "Company Health Insurance",
+        "Flexi Health Insurance Plans"
       ]
     },
-    
-      
-    
-   
   ];
 
   return (
@@ -41,6 +37,7 @@ const Healthservice = () => {
           <Link
             to="/services2"
             className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 font-semibold transition-colors"
+            aria-label="Back to all services"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Services
@@ -50,7 +47,7 @@ const Healthservice = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <img src={tj} alt="Health Services" className="h-24 w-auto" />
+            <img src={tj} alt="Health Services logo" className="h-24 w-auto" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#1a1a1a" }}>
             Health <span style={{ color: "#059669" }}>Services</span>
@@ -61,8 +58,8 @@ const Healthservice = () => {
           </p>
         </div>
 
-        {/* Health Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Health Categories - Centered for single category */}
+        <div className="max-w-2xl mx-auto">
           {healthCategories.map((category, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 hover:shadow-xl transition-shadow">
               <div className="p-6">
@@ -87,6 +84,7 @@ const Healthservice = () => {
           <button
             onClick={() => openWhatsApp("Health Services")}
             className="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            aria-label="Enquire about Health Services via WhatsApp"
           >
             <span>📞</span>
             Enquire Now
@@ -100,4 +98,4 @@ const Healthservice = () => {
   );
 };
 
-export default Healthservice;
+export default HealthService;

@@ -7,7 +7,7 @@ const MOHREServices = () => {
   const openWhatsApp = (serviceName) => {
     const msg = `Hello, I would like an enquiry about ${serviceName}`;
     window.open(
-      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/971507514808?text=${encodeURIComponent(msg)}`, // ✅ Fixed number
       "_blank"
     );
   };
@@ -15,9 +15,7 @@ const MOHREServices = () => {
   const mohreServices = [
     "Labour Card Issuance and Renewal",
     "Labour Card Cancellation",
-    "Temporary Work Permit",
     "Relative Work Permit",
-    "Golden Work Permit",
     "License Updation",
     "Quota Request"
   ];
@@ -35,6 +33,7 @@ const MOHREServices = () => {
           <Link
             to="/services2"
             className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 font-semibold transition-colors"
+            aria-label="Back to all services"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Services
@@ -44,7 +43,7 @@ const MOHREServices = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <img src={tj} alt="MOHRE Services" className="h-24 w-auto" />
+            <img src={tj} alt="MOHRE Services logo" className="h-24 w-auto" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#1a1a1a" }}>
             MOHRE <span style={{ color: "#059669" }}>Services</span>
@@ -76,6 +75,7 @@ const MOHREServices = () => {
             <button
               onClick={() => openWhatsApp("MOHRE Services")}
               className="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              aria-label="Enquire about MOHRE Services via WhatsApp"
             >
               <span>📞</span>
               Enquire Now

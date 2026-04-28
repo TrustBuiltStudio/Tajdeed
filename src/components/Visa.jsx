@@ -7,7 +7,7 @@ const Visa = () => {
   const openWhatsApp = (serviceName) => {
     const msg = `Hello, I would like an enquiry about ${serviceName}`;
     window.open(
-      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/971507514808?text=${encodeURIComponent(msg)}`, // ✅ Fixed number
       "_blank"
     );
   };
@@ -17,45 +17,21 @@ const Visa = () => {
       title: "Family Visa Services",
       services: [
         "Family File Open",
-    
         "Status Change",
         "Family Visa Issuance and Renewals",
         "Newborn Visa Service",
         "Family Health Insurance Services",
-        "6 Months Staying Outside Permit"
       ]
     },
     {
       title: "Tourist & Visit Visa",
       services: [
-      
-       "Tourist Visa", 
-       "Business Visa", 
-       "Golden Visa", 
-        "Saudi Multiple Entry Visa", 
-        "Schengen Visa", "US Visa", 
+        "Tourist Visa", 
+        "Business Visa",
         "Visit Visa Extensions", 
-        "Visa Cancellation & Status Check"
+        "Multi Entry visa"
       ]
     },
-     {
-  title: "Copywriting",
-  services: [
-    "Brochures and Manuals",
-    "Websites",
-    "Social Media Content"
-  ]
-},
-{
-  title: "Proofreading",
-  services: [
-    "Theses and Dissertations",
-    "Books",
-    "Capstone Projects",
-    "All Types of Publications"
-  ]
-}
-  
   ];
 
   return (

@@ -7,19 +7,16 @@ const JudicialServices = () => {
   const openWhatsApp = (serviceName) => {
     const msg = `Hello, I would like an enquiry about ${serviceName}`;
     window.open(
-      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/971507514808?text=${encodeURIComponent(msg)}`, // ✅ Fixed number
       "_blank"
     );
   };
 
   const judicialServices = [
     "Notary Services",
-    "LLC Contract Drafting and Attestation",
     "Traffic Fine Reduction Requests",
     "Parking Fine Reduction Assistance",
-    "Legal Document Translation",
     "Court Case Status Follow-up",
-    "Marriage & Divorce Certificate Services",
     "Legal Consultation Coordination"
   ];
 
@@ -42,6 +39,7 @@ const JudicialServices = () => {
           <Link
             to="/services2"
             className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 font-semibold transition-colors"
+            aria-label="Back to all services"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Services
@@ -51,17 +49,7 @@ const JudicialServices = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex items-center justify-center p-3 border-2 border-emerald-200">
-              <img
-                src={tj}
-                alt="Judicial & PCC Services"
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/150?text=LAW";
-                  e.target.onerror = null;
-                }}
-              />
-            </div>
+            <img src={tj} alt="Judicial & PCC Services logo" className="h-24 w-auto" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#1a1a1a" }}>
             Judicial & <span style={{ color: "#059669" }}>PCC Services</span>
@@ -73,7 +61,7 @@ const JudicialServices = () => {
         </div>
 
         {/* Judicial Services Section */}
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-3xl mx-auto mb-12">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100">
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-6 text-emerald-800">Judicial Services Include:</h2>
@@ -90,18 +78,18 @@ const JudicialServices = () => {
         </div>
 
         {/* PCC Services Section */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100">
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-6 text-emerald-800">Police Clearance Certificate (PCC) Services:</h2>
               <p className="text-gray-600 mb-6">
                 Get your UAE Police Clearance Certificate easily for job applications, embassy visa processing, Golden Visa, and higher studies even without UAE Pass. Service available for visit visa holders as well. Fast, reliable, and hassle-free assistance.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 {pccServices.map((service, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition-colors">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium text-lg">{service}</span>
+                    <span className="text-gray-700 font-medium">{service}</span>
                   </div>
                 ))}
               </div>
@@ -114,6 +102,7 @@ const JudicialServices = () => {
           <button
             onClick={() => openWhatsApp("Judicial & PCC Services")}
             className="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            aria-label="Enquire about Judicial & PCC Services via WhatsApp"
           >
             <span>📞</span>
             Enquire Now

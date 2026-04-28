@@ -1,5 +1,4 @@
 import React from 'react';
-import Visa  from './Visa';
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -10,7 +9,7 @@ const Services = () => {
   const openWhatsApp = (serviceName) => {
     const msg = `Hello, I would like an enquiry about ${serviceName}`;
     window.open(
-      `https://wa.me/971569229776?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/971507514808?text=${encodeURIComponent(msg)}`, // ✅ Fixed WhatsApp number
       "_blank"
     );
   };
@@ -25,8 +24,8 @@ const Services = () => {
           description:
             "Complete UAE visa processing including new applications, renewals, family visas and immigration assistance.",
           image: tj,
-          link: "/visa", // ✅ More button links to /services2
-          showMore: true,     // ✅ Show More button only here
+          link: "/visa",
+          showMore: true,
         },
         {
           id: "document-services",
@@ -38,7 +37,7 @@ const Services = () => {
           showMore: true,
         },
         {
-          id: "TAMM ",
+          id: "tamm-services", // ✅ Fixed: removed trailing space, lowercase
           title: "TAMM Service",
           description:
             "Fast and easy government services for business and personal documentation in Abu Dhabi.",
@@ -49,8 +48,8 @@ const Services = () => {
         {
           id: "pro-services",
           title: "Mohre Service",
-         description: "Complete support for Ministry of Human Resources and Emiratisation (MOHRE) services, including labour contracts, work permits, and employment-related approvals in the UAE.",
-         image:tj,
+          description: "Complete support for Ministry of Human Resources and Emiratisation (MOHRE) services, including labour contracts, work permits, and employment-related approvals in the UAE.",
+          image: tj,
           link: "/MOHREServices",
           showMore: true,
         },
@@ -64,13 +63,13 @@ const Services = () => {
           showMore: true,
         },
         {
-  id: "judicial-services",
-  title: "Judicial Services",
-  description: "Professional support with Abu Dhabi Judicial Department services and legal documentation.",
-  image: tj,
-  link: "/judicialservices",
-  showMore: true,  // or false if you want only enquiry button
-}
+          id: "judicial-services",
+          title: "Notry Public Service",
+          description: "Professional support with Abu Dhabi Judicial Department services and legal documentation.",
+          image: tj,
+          link: "/judicialservices",
+          showMore: true,
+        }
       ],
     },
     {
@@ -103,18 +102,8 @@ const Services = () => {
           link: "/services/tajer-license",
           showMore: false,
         },
-        {
-          id: "compliance-advisory",
-          title: "Compliance Advisory",
-          description:
-            "Expert guidance on UAE regulations and compliance obligations.",
-          image: tj,
-          link: "/services/compliance-advisory",
-          showMore: false,
-        },
       ],
     },
-    
     {
       category: "Printing Services",
       services: [
@@ -156,7 +145,7 @@ const Services = () => {
       ],
     },
     {
-            category: "Travel & Ticketing",
+      category: "Travel & Ticketing",
       services: [
         {
           id: "air-ticket-booking",
@@ -285,7 +274,7 @@ const Services = () => {
                         Enquiry
                       </button>
 
-                      {/* More Button — only for Visa Services */}
+                      {/* More Button — only for services with showMore = true */}
                       {service.showMore && (
                         <Link
                           to={service.link}
