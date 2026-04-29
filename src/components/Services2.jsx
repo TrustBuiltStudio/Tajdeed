@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 // Import Images
 import tj from "../assets/logo.jpeg";
+import img from "../assets/aro.jpg";
 
 const Services = () => {
   const openWhatsApp = (serviceName) => {
@@ -152,7 +153,7 @@ const Services = () => {
           title: "Air Ticket Booking",
           description:
             "Competitive rates and comprehensive travel support for domestic and international travel.",
-          image: tj,
+          image: img,
           link: "/services/air-ticket-booking",
           showMore: false,
         },
