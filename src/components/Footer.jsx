@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Left Column - Company Info */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#059669] leading-tight">
-              Tajdeed Typing and <br />
+              Tajdeed Typing  <br />
               Center
             </h2>
             <p className="text-gray-600 text-lg max-w-md">

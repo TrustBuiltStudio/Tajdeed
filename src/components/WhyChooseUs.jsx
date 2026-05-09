@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Government Approvels",
+      title: "Government Approvals",
       description: "Fully licensed and authorized service provider with official credentials you can trust."
     },
     {
